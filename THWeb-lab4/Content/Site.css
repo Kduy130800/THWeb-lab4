@@ -2,11 +2,16 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.navbar-inverse {
+    background-color: #882e8e;
+    border-color: #080808;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +27,24 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Course layout*/
+.course{
+    list-style:none;
+}
+.course > li{
+    position:relative;
+    margin-bottom:30px;
+}
+.course >li.date{
+    text-align:center;
+    background-color:#cf356e;
+    color:white;
+    width:60px;
+    boder-radius:8px;
+}
+.course > li.details{
+    position:absolute;
+    top:0;
+    left:70px;
+}
+

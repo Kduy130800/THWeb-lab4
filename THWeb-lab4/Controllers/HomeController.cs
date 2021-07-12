@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using THWeb_lab4.Models;
+using System.Data.Entity;
 
 namespace THWeb_lab4.Controllers
 {
@@ -17,11 +18,11 @@ namespace THWeb_lab4.Controllers
         }
         public ActionResult Index()
         {
-           // var upcommingCourse = _dbContext.Courses
-               // .Include(c => c.Lecturer)
-               // .Include(c => c.Category)
-               // .Where(c => c.DateTime > DateTime.Now);
-            return View();
+           var upcommingCourse = _dbContext.Courses
+                .Include(c => c.Lecturer)
+                .Include(c => c.Category)
+                .Where(c => c.DateTime > DateTime.Now);
+            return View(upcommingCourse);
         }
 
         public ActionResult About()
